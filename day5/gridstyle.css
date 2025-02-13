@@ -1,0 +1,17 @@
+.container{
+    width: 90vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:5px;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+    height: fit-content;
+}
+
+.grid-item{
+    height: fit-content;
+}
