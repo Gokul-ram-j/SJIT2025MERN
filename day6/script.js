@@ -35,3 +35,30 @@ const obj = { a: 1, b: 2, c: 3 };
 for (let key in obj) {
     console.log(`For...in Loop: Key ${key}, Value ${obj[key]}`);
 }
+
+
+
+
+//  objects in js
+
+// Creating an object
+const person = {
+    name: "Alice",
+    age: 25,
+    isStudent: false,
+    address: {
+        city: "New York",
+        zip: 10001
+    },
+    hobbies: ["Reading", "Gaming", "Traveling"],
+    greet: function() {
+        return `Hello, my name is ${this.name}`;
+    }
+};
+
+// Accessing object properties
+console.log(person.name); // Dot notation
+console.log(person["age"]); // Bracket notation
+console.log(person.address.city); // Nested object access
+console.log(person.hobbies[1]); // Accessing array inside object
+console.log(person.greet()); // Calling object method
