@@ -62,3 +62,24 @@ console.log(person["age"]); // Bracket notation
 console.log(person.address.city); // Nested object access
 console.log(person.hobbies[1]); // Accessing array inside object
 console.log(person.greet()); // Calling object method
+
+
+//  functions// 1. Regular Function (Function Declaration)
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet("Alice")); // Hello, Alice!
+
+// 2. Function Expression
+const add = function(a, b) {
+    return a + b;
+};
+console.log(add(5, 10)); // 15
+
+// 3. Arrow Function (ES6)
+const multiply = (a, b) => a * b;
+console.log(multiply(3, 4)); // 12
+
+
+
+
