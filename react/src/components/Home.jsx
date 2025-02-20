@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 function Home({properties}) {
   useEffect(()=>{
-    console.log('useEffect triggered')
-  })
+    console.log('useEffect triggered when text change')
+  },[text])
   const [text,setText]=useState('')
   return (
     <div>
