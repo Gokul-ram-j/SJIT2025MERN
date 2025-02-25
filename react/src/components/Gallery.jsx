@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useMemo} from "react";
 
 function Gallery() {
   const ExpensiveCalculation = ({ num }) => {

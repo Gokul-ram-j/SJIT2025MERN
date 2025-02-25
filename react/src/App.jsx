@@ -4,6 +4,7 @@ import Gallery from './components/Gallery'
 import Signup from './components/Signup'
 import Contact from './components/Contact'
 import About from './components/About'
+import CustomHooks from "./components/CustomHooks";
 
 const Navbar = () => {
   return (
@@ -13,6 +14,7 @@ const Navbar = () => {
       <Link to="/signup">Signup</Link>
       <Link to="/contact">Contact</Link>
       <Link to="/about">About</Link>
+      <Link to="/customhooks">Custom Hooks</Link>
     </nav>
   );
 };
@@ -28,6 +30,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/customhooks" element={<CustomHooks/>} />
       </Routes>
     </Router>
   );
