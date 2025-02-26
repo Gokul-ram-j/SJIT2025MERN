@@ -54,6 +54,17 @@ app.get('/loginform',(req,res)=>{
   res.sendFile('C:/code/html_css/node-express/sample.html')
 })
 
+app.post("/submit", (req, res) => {
+  const { name, email, message } = req.body;
+  
+  if (!name || !email || !message) {
+      return res.status(400).json({ error: "All fields are required" });
+  }
+
+  console.log("Form Data Received:", { name, email, message });
+
+  res.json({ success: true, message: "Form submitted successfully!" });
+});
 
 
 
