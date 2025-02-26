@@ -46,6 +46,10 @@ app.get('/users', async (req, res) => {
   }
 });
 
+app.get('/login',(req,res)=>{
+  res.send('<h1>hello</h1>')
+})
+
 
 
 
