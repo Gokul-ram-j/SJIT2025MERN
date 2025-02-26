@@ -50,6 +50,10 @@ app.get('/login',(req,res)=>{
   res.send('<h1>hello</h1>')
 })
 
+app.get('/loginform',(req,res)=>{
+  res.sendFile('C:/code/html_css/node-express/sample.html')
+})
+
 
 
 
