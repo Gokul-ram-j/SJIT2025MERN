@@ -2,13 +2,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-
+const cors=require('cors')
 // Set up a port for the server to listen on
 const port = 3000;
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
-
+app.use(cors)
 // Basic route that sends a message to the client
 app.get('/', (req, res) => {
   res.send('Hello, welcome to the Express server!');
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 const mongoURI = 'mongodb://localhost:27017/sample';
 
 // Connect to MongoDB using Mongoose
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoURI)
   .then(() => {
     console.log('MongoDB connected successfully');
   })
@@ -31,6 +31,17 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
 });
+// signup scheme
+const signUpSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  password: { type: String, required: true },
+});
+
+
+app.post('/signup',(req,res)=>{
+  console.log('entered db')
+  console.log(req.body)
+})
 
 const User = mongoose.model('sample Collection', userSchema);
 
