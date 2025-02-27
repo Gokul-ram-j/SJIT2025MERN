@@ -4,12 +4,15 @@ const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
 const bcrypt=require('bcrypt')
+const jwt=require('jsonwebtoken')
+const dotenv=require('dotenv')
 // Set up a port for the server to listen on
 const port = 3000;
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
 app.use(cors());
+dotenv.config()
 // Basic route that sends a message to the client
 app.get("/", (req, res) => {
   res.send("Hello, welcome to the Express server!");
@@ -43,8 +46,11 @@ const User = mongoose.model("sample Collection", userSchema);
 const UserSignUp = mongoose.model("usersignups", signUpSchema);
 app.post("/signup", async (req, res) => {
   const hashedPassword=await bcrypt.hash(req.body.password,10)
-  console.log(hashedPassword)
+  console.log("hashed password",hashedPassword)
   const newUser = new UserSignUp({email:req.body.email,password:hashedPassword});
+  const payload=req.body
+  const token=jwt.sign(payload,process.env.SECRET_KEY,{expiresIn:'10m'})
+  console.log("jwt token",token)
   console.log(newUser)
   await newUser
     .save()
