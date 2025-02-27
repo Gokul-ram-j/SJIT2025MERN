@@ -1,0 +1,68 @@
+.container {
+    width: 320px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .heading {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputGroup {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .inputGroup label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .focusBtn, .submitBtn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .focusBtn {
+    background-color: #ffcc00;
+    color: #333;
+  }
+  
+  .focusBtn:hover {
+    background-color: #e6b800;
+  }
+  
+  .submitBtn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .submitBtn:hover {
+    background-color: #45a049;
+  }
+  
